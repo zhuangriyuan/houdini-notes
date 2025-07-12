@@ -38,4 +38,11 @@ divergence           -> __Add__
 1. 小体积container用两个collider，一个常规 __volume collider__，另一个用 __surface collider__
 2. 如果flip和collision object碰撞后在表面似乎有bounding box阻止，在volume collision中增加 __bandwith__
 3. __density__ 可以控制flip上浮/下沉，制作泡沫
-4. karma渲染ocean需要 __houdini ocean procedural__ 和 __houdini preview procedural__, houdini preview procedural需要在karama render 和ropouput之间
+4. karma渲染ocean需要 __houdini ocean procedural__ 和 __houdini preview procedural__, houdini ocean procedural中viewport quality需要设置为1, houdini preview procedural需要在karama render 和ropouput之间
+
+#### Flip 海洋流程
+1. Ocean Spectrum
+2. Ocean Foam
+3. Flip Sim
+4. Merge
+5. White Water Sim
