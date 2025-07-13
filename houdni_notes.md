@@ -40,9 +40,16 @@ divergence           -> __Add__
 3. __density__ 可以控制flip上浮/下沉，制作泡沫
 4. karma渲染ocean需要 __houdini ocean procedural__ 和 __houdini preview procedural__, houdini ocean procedural中viewport quality需要设置为1, houdini preview procedural需要在karama render 和ropouput之间
 
+#### Flip 河流流程
+1. 需要一个主体河流flip source，用flip object中的 particle field引入
+2. 需要两个持续发射的volume在两端，一个是标准surface volume，一个是带v的rasterzie后的。flip solver中打开 __Use Boundary Layer__ 和 __Apply Boundary Velocities__
 #### Flip 海洋流程
 1. Ocean Spectrum
 2. Ocean Foam
 3. Flip Sim
-4. Merge
+4. 用particle fluid mask __Merge__ sim和spectrum
 5. White Water Sim
+6. Foam From White Water Sim (Render As Volume)
+7. Bubble From White Water Sim (Render As Particles)
+8. Spray From White Water Sim (再用popnetwork sim漂浮的感觉,再merge回原本的sim)
+9. Mist Sim (用船头的particle做一个smoke sim)
