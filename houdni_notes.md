@@ -53,3 +53,29 @@ divergence           -> __Add__
 7. Bubble From White Water Sim (Render As Particles)
 8. Spray From White Water Sim (再用popnetwork sim漂浮的感觉,再merge回原本的sim)
 9. Mist Sim (用船头的particle做一个smoke sim)
+
+#### Cop Network
+
+__height to ambient occlusion__
+> convert后再和原来height做blend，输入到ramp rgb中做base color
+
+__channel split__ 后接 __equalize__
+> blue是depth, equalize后scale to maximum length拿到0-1
+
+__equalize__
+> 将颜色重映射
+
+__random mono__
+> 将id重映射到黑白灰随机
+
+__uv transform__
+> 连上id后可以对每个id对应的uv分别旋转
+
+__dilate erode__
+> expand或者shrink mask
+
+__statistics by id__
+> 根据面积计算黑白
+
+__segment by connectivity__
+> 根据连接创建id
