@@ -79,3 +79,6 @@ __statistics by id__
 
 __segment by connectivity__
 > 根据连接创建id
+
+__uvmap by id__
+> 可以接在segment by connectivity之后，然后用uv transform旋转
