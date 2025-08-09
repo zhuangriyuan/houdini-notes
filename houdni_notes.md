@@ -82,3 +82,6 @@ __segment by connectivity__
 
 __uvmap by id__
 > 可以接在segment by connectivity之后，然后用uv transform旋转
+
+__feather__
+> 羽化边缘
